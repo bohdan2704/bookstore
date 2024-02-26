@@ -5,13 +5,12 @@ import com.example.bookshop.model.Book;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.EntityTransaction;
-import lombok.RequiredArgsConstructor;
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.springframework.stereotype.Repository;
-
 import java.util.List;
+import java.util.Optional;
+
+import jakarta.persistence.TypedQuery;
+import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Repository;
 
 @Repository
 @RequiredArgsConstructor
@@ -38,6 +37,15 @@ public class BookRepositoryImpl implements BookRepository {
             if (entityManager != null) {
                 entityManager.close();
             }
+        }
+    }
+
+    @Override
+    public Optional<Book> getById(Long id) {
+        try (EntityManager entityManager = entityManagerFactory.createEntityManager()) {
+            TypedQuery<Book> query = entityManager.createQuery("FROM Book WHERE id = :id", Book.class);
+            query.setParameter("id", id);
+            return Optional.ofNullable(query.getSingleResult());
         }
     }
 
