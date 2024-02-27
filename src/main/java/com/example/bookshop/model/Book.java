@@ -18,22 +18,16 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     @NotBlank
     @Size(max = 100)
     private String title;
-
     @NotBlank
     @Size(max = 100)
     private String author;
-
     @NotBlank
     private String isbn;
-
     @NotNull
     private BigDecimal price;
-
     private String description;
-
     private String coverImage;
 }
