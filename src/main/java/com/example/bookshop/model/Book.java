@@ -9,11 +9,15 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import java.math.BigDecimal;
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+import org.hibernate.annotations.SoftDelete;
 
 @Entity
-@Data
+@Getter
+@Setter
 @Table(name = "books")
+@SoftDelete
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
