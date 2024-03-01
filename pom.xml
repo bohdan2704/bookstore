@@ -13,6 +13,7 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>bookshop</name>
     <description>bookshop</description>
+    <!--    Properties-->
     <properties>
         <maven.checkstyle.plugin.configLocation>checkstyle.xml</maven.checkstyle.plugin.configLocation>
         <java.version>17</java.version>
