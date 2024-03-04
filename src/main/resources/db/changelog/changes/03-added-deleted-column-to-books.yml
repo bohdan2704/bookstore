@@ -1,0 +1,12 @@
+databaseChangeLog:
+  - changeSet:
+      id: added-deleted-column-to-books
+      author: bohdan
+      changes:
+        - addColumn:
+            tableName: books
+            columns:
+              - column:
+                  name: deleted
+                  type: boolean
+                  defaultValueBoolean: false
