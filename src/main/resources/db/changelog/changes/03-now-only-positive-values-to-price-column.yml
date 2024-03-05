@@ -1,0 +1,11 @@
+databaseChangeLog:
+  - changeSet:
+      id: now-only-positive-values-to-price-column
+      author: bohdan
+      changes:
+        - addCheckConstraint:
+            constraintBody: price >= 0
+            constraintName: price_only_positive
+            disabled: true
+            tableName: books
+            validate: true

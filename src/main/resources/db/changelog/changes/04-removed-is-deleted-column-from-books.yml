@@ -1,8 +1,0 @@
-databaseChangeLog:
-  - changeSet:
-      id: drop-is-deleted-column-from-books
-      author: bohdan
-      changes:
-        - dropColumn:
-            tableName: books
-            columnName: is_deleted

@@ -2,8 +2,6 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/01-create-book-table.yml
   - include:
-      file: db/changelog/changes/02-added-is-deleted-column-to-books.yml
-  - include:
-      file: db/changelog/changes/03-added-deleted-column-to-books.yml
-  - include:
-      file: db/changelog/changes/04-removed-is-deleted-column-from-books.yml
+      file: db/changelog/changes/02-added-deleted-column-to-books.yml
+#  - include:
+#      file: db/changelog/changes/03-now-only-positive-values-to-price-column.yml
