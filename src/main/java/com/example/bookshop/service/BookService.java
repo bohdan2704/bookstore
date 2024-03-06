@@ -2,9 +2,8 @@ package com.example.bookshop.service;
 
 import com.example.bookshop.dto.BookDto;
 import com.example.bookshop.dto.CreateBookDto;
-import org.springframework.data.domain.Pageable;
-
 import java.util.List;
+import org.springframework.data.domain.Pageable;
 
 public interface BookService {
     BookDto save(CreateBookDto createBookDto);
